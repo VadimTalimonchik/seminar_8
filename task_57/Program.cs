@@ -192,7 +192,7 @@ int[] CreateSingleArray(int[,] inArray) // создаём одномерный �
     {
         for (int j = 0; j < inArray.GetLength(1); j++)
         {
-            result[k] = inArray[i, j];
+            result[k] = inArray[i, j]; // заполняем одномерный массив элементами из двумерного
             Console.Write(result[k] + " ");
             k++;
         }
