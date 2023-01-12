@@ -159,7 +159,7 @@ FrequencyDictionary(
 Console.WriteLine();
 
 
-int[,] GetArray(int m, int n)
+int[,] GetArray(int m, int n) // создаём двумерный массив и заполняем его двумерными числами
     {
     int[,] result = new int[m, n];
     for (int i = 0; i < m; i++)
@@ -172,7 +172,7 @@ int[,] GetArray(int m, int n)
     return result;
 }
 
-void PrintArray(int[,] inArray)
+void PrintArray(int[,] inArray) // распечатываем массив
 {
 for (int i = 0; i < inArray.GetLength(0); i++)
 {
@@ -184,7 +184,7 @@ Console.WriteLine();
 }
 }
 
-int[] CreateSingleArray(int[,] inArray)
+int[] CreateSingleArray(int[,] inArray) // создаём одномерный массив из двумерного массива
 {
     int k = 0;
     int[] result = new int[inArray.GetLength(0) * inArray.GetLength(1)];
@@ -201,7 +201,7 @@ int[] CreateSingleArray(int[,] inArray)
     return result;
 }
 
-int[] SortArray(int[] inArray)
+int[] SortArray(int[] inArray) // сортируем одномерный массив от min до max
 {
     Array.Sort(inArray);
     for (int i = 0; i < inArray.Length; i++)
@@ -212,7 +212,8 @@ int[] SortArray(int[] inArray)
     return inArray;
 }
 
-void FrequencyDictionary(int[] newarray)
+void FrequencyDictionary(int[] newarray) // прогоняем отсортированный одномерный массив, находим одинаковые числа
+                                         // и записываем их количество в счётчик для дальнейшего вывода
 {
     int count = 1;
     int solveelement = newarray[0];
